@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وكالة حرف – كتابة محتوى + حلول الذكاء الاصطناعي</title>
+
+<style>
+/* ------------------------- */
+/* القيم الأساسية للهوية    */
+/* ------------------------- */
+:root {
+  --purple: #6D4AB4;
+  --purple-dark: #4B2E7A;
+  --gold: #C8A46B;
+  --light-bg: #F7F7F7;
+  --dark-bg: #0E0E12;
+  --text-light: #111;
+  --text-dark: #fff;
+}
+
+/* ------------------------- */
+/* الوضع الداكن والفاتح      */
+/* ------------------------- */
+body.light {
+  background: var(--light-bg);
+  color: var(--text-light);
+}
+body.dark {
+  background: var(--dark-bg);
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+/* ------------------------- */
+/* هيرو – Hero Section       */
+/* ------------------------- */
+
+.hero {
+  background: url("images/hero-writing.jpg") center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin: 0 0 15px;
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+/* ------------------------- */
+/* سكشن من نحن              */
+/* ------------------------- */
+
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about img {
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+/* ------------------------- */
+/* سكشن البراندينغ          */
+/* ------------------------- */
+
+.branding img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* ------------------------- */
+/* سكشن الخدمات الكتابية     */
+/* ------------------------- */
+
+.services img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+/* ------------------------- */
+/* سكشن الذكاء الاصطناعي     */
+/* ------------------------- */
+
+.ai-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.ai-section img {
+  width: 440px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(120, 70, 255, 0.45);
+  transform: perspective(1200px) rotateY(-8deg);
+}
+
+/* ------------------------- */
+/* تواصل معنا                */
+/* ------------------------- */
+
+.contact {
+  background: var(--purple-dark);
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+  border-radius: 12px;
+}
+
+button.toggle {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  padding: 10px 18px;
+  background: var(--purple-dark);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body class="dark">
+
+<button class="toggle" onclick="toggleTheme()">تغيير الوضع</button>
+
+<!-- ----------------------------------------------------- -->
+<!--                     HERO SECTION                       -->
+<!-- ----------------------------------------------------- -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>وكالة حرف</h1>
+    <p>من أول حرف… تبدأ الحكاية.  
+    نصنع المحتوى الذي يتحدث بصوت علامتك،  
+    ونعزز حضورك بحلول كتابة + ذكاء اصطناعي.</p>
+  </div>
+</section>
+
+<!-- ----------------------------------------------------- -->
+<!--                     ABOUT US                           -->
+<!-- ----------------------------------------------------- -->
+<section class="about">
+  <img src="images/about-portrait.jpg" alt="عن الوكالة">
+  <div>
+    <h2>من نحن</h2>
+    <p>نحن صناع محتوى… نكتب بالهوية ونبني الرسالة.  
+       ندمج الإبداع + التحليل + التقنية لنقدم محتوى يحقق أثراً.</p>
+  </div>
+</section>
+
+<!-- ----------------------------------------------------- -->
+<!--                 BRANDING SECTION                       -->
+<!-- ----------------------------------------------------- -->
+<section class="branding">
+  <h2>البراندينغ والهوية اللغوية</h2>
+  <img src="images/branding-stationery.jpg" alt="الهوية اللغوية">
+  <p>نصنع شخصية العلامة… صوتها، رسالتها، ونبرة تواصلها.</p>
+</section>
+
+<!-- ----------------------------------------------------- -->
+<!--                 WRITING SERVICES                       -->
+<!-- ----------------------------------------------------- -->
+<section class="services">
+  <h2>خدمات الكتابة</h2>
+  <img src="images/writing-desk-purple.jpg" alt="خدمات الكتابة">
+  <p>كتابة مواقع، صفحات هبوط، محتوى سوشيال، مقالات SEO، كتابة صحفية.</p>
+</section>
+
+<!-- ----------------------------------------------------- -->
+<!--                 AI SOLUTIONS                           -->
+<!-- ----------------------------------------------------- -->
+<section class="ai-section">
+  <img src="images/ai-hologram.jpg" alt="ذكاء اصطناعي">
+  <div>
+    <h2>حلول الذكاء الاصطناعي للكتابة</h2>
+    <p>نصمّم وكلاء كتابة مخصّصين لشركتك.  
+       AI Copywriting Agents – AI Editorial Systems – AI Press Assistants</p>
+  </div>
+</section>
+
+<!-- ----------------------------------------------------- -->
+<!--                 CONTACT SECTION                        -->
+<!-- ----------------------------------------------------- -->
+<section class="contact">
+  <h2>تواصل معنا</h2>
+  <p>contact@harfagency.com</p>
+  <p>واتساب: +966 5xxxxxxx</p>
+</section>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>

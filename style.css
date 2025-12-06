@@ -1,0 +1,176 @@
+:root {
+    --bg: #f7f7f7;
+    --text: #333;
+    --card-bg: #ffffff;
+    --purple: #6D597A;
+    --gold: #C49A6C;
+}
+
+html.dark {
+    --bg: #0b0a0f;
+    --text: #f7f7f7;
+    --card-bg: #151320;
+    --purple: #B38DCE;
+    --gold: #D9B98A;
+}
+
+/* عامة */
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cairo', sans-serif;
+    transition: 0.3s ease;
+}
+
+section {
+    padding: 80px 7%;
+}
+
+/* عنوان */
+.section-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--purple);
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #6d597a, #2c2233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/hero-dark.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+    filter: blur(4px);
+}
+
+html:not(.dark) .hero-layer {
+    background: url('images/hero-light.webp');
+    opacity: 0.3;
+}
+
+.hero-title {
+    font-size: 70px;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.btn-secondary {
+    margin-right: 12px;
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+}
+
+/* بطاقات */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 26px rgba(0,0,0,0.06);
+    transition: 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.icon svg {
+    margin-bottom: 18px;
+}
+
+/* داكن */
+html.dark .hero {
+    background: linear-gradient(135deg, #1a141d, #0b0a0f);
+}
+
+/* زر الثيم */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 55px;
+    height: 28px;
+    border: none;
+    border-radius: 30px;
+    background: #333;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.theme-toggle .toggle-circle {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 3px;
+    transition: 0.3s;
+}
+
+html.dark .theme-toggle {
+    background: var(--gold);
+}
+
+html.dark .toggle-circle {
+    transform: translateX(27px);
+    background: #000;
+}
+
+/* تواصل */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
